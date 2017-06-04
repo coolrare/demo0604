@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MaskPipe } from './mask.pipe';
 import { DataService } from './data.service';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MaskPipe
+    MaskPipe,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
