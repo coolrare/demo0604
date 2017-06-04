@@ -12,4 +12,8 @@ export class AppComponent {
     console.log($event);
     this.keyword = '';
   }
+
+  setKeyword($event) {
+    this.keyword = $event.target.value;
+  }
 }
