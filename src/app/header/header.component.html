@@ -27,6 +27,7 @@
 
       <img [src]="logourl" class="pull-left logo"
            [title]="sitename"
+           (click)="addCounter()"
            (click)="changeTitle()">
 
       <div class="pull-left">
@@ -35,8 +36,8 @@
             {{ sitename }}
           </a>
         </h1>
-        <h3 [innerHTML]="subtitle">
-
+        <h3 [ngClass]="{'highlight': counter % 2 == 0}">
+          {{ subtitle }} +{{counter}}
         </h3>
       </div>
 
