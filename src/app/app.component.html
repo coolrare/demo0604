@@ -8,8 +8,8 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <article class="post" id="post0"
-          *ngFor="let item of data">
+        <article class="post" id="post{{i}}"
+          *ngFor="let item of data; let i=index">
           <header class="post-header">
             <h2 class="post-title">
               <a [href]="item.href">{{item.title}}</a>
