@@ -26,7 +26,8 @@
     <div class="container">
 
       <img [src]="logourl" class="pull-left logo"
-           [title]="sitename">
+           [title]="sitename"
+           (click)="changeTitle()">
 
       <div class="pull-left">
         <h1>

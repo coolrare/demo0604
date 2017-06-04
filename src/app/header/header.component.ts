@@ -12,12 +12,13 @@ export class HeaderComponent implements OnInit {
   logourl = '/assets/images/logo.png';
 
   constructor() {
-    setTimeout(() => {
-      this.sitename = 'The Will Will Web';
-    }, 1500);
   }
 
   ngOnInit() {
+  }
+
+  changeTitle() {
+    this.sitename = 'The Will Will Web';
   }
 
 }
