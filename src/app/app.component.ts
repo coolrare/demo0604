@@ -13,7 +13,7 @@ export class AppComponent {
     this.keyword = '';
   }
 
-  setKeyword($event) {
-    this.keyword = $event.target.value;
+  setKeyword(str: string) {
+    this.keyword = str;
   }
 }
