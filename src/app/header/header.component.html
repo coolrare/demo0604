@@ -36,7 +36,7 @@
             {{ sitename }}
           </a>
         </h1>
-        <h3 [ngClass]="{'highlight': counter % 2 == 0}">
+        <h3 [ngClass]="{'highlight': IsHighlight()}">
           {{ subtitle }} +{{counter}}
         </h3>
       </div>

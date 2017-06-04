@@ -27,4 +27,8 @@ export class HeaderComponent implements OnInit {
     this.counter++;
   }
 
+  IsHighlight() {
+    return this.counter % 2 === 0;
+  }
+
 }
