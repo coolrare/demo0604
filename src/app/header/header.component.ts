@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  sitename = 'My App';
+
+  logourl = '/assets/images/logo.png';
+
+  constructor() {
+    setTimeout(() => {
+      this.sitename = 'The Will Will Web';
+    }, 1500);
+  }
 
   ngOnInit() {
   }
