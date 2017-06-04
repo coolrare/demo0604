@@ -5,7 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MaskPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: string, max_chars: number = 2): any {
+    if (value && value.length > max_chars) {
+      return value.substr(0, max_chars) + '****';
+    }
     return null;
   }
 
