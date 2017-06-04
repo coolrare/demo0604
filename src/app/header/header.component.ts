@@ -31,4 +31,8 @@ export class HeaderComponent implements OnInit {
     return this.counter % 2 === 0;
   }
 
+  ShowHighlight() {
+    return { 'highlight': this.IsHighlight() };
+  }
+
 }
