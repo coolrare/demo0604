@@ -9,7 +9,7 @@
 
         <!-- Article START-->
         <article class="post" id="post{{i}}"
-          *ngFor="let item of data; let i=index">
+          *ngFor="let item of datasvc.data; let i=index">
           <header class="post-header">
             <h2 class="post-title">
               <a [href]="item.href">{{ item.title | uppercase }}</a>

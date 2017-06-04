@@ -1,5 +1,5 @@
-import { Http } from '@angular/http';
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   keyword = 'Hello';
 
-  data: any;
-
-  constructor(private http: Http) {
-    this.http.get('/api/articles.json')
-      .subscribe(res => {
-        this.data = res.json();
-      });
+  constructor(public datasvc: DataService) {
+    this.datasvc.loadArticles();
   }
 
   clearKeyword($event: KeyboardEvent) {
