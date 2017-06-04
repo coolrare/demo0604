@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
 
-  data: any = [];
-
   constructor(private http: Http) { }
 
-  loadArticles() {
-    this.http.get('/api/articles.json')
-      .subscribe(res => {
-        this.data = res.json();
-      });
+  loadArticles(): Observable<Response> {
+    return this.http.get('/api/articles.json');
   }
 }
