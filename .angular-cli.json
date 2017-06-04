@@ -8,7 +8,9 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "api",
         "assets",
+        "blog-index.html",
         "favicon.ico"
       ],
       "index": "index.html",
